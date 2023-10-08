@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Board</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(40, 20px);
+            gap: 5px;
+        }
 
+        .square {
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            transition: background-color 1s ease;
+        }
+
+        .square:hover {
+            background-color: #f00;
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-	  <div class="container">
+    <div class="container">
         <!-- Create 800 squares -->
         <?php for ($i = 0; $i < 800; $i++) { ?>
             <div class="square"></div>
         <?php } ?>
     </div>
-    <script type="text/javascript" src="./script.js">
-</script>
-
 </body>
-
 </html>
+
